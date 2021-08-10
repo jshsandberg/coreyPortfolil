@@ -1,0 +1,17 @@
+.navBarContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.navBarContainer > h4 {
+    padding: 1em
+}
+
+.navBarItem:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.navBarItemActive {
+    color: gray
+}

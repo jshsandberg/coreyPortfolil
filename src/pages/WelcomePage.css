@@ -1,0 +1,46 @@
+.welcomePageImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.welcomePageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.welcomePagePhoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcomePagePhoto > * {
+    margin-bottom: 0;
+    margin-top: .5em;
+}
+
+.welcomePageButton {
+    margin-top: 2em;
+}
+
+.welcomePageButton > button {
+    border-radius: 2em;
+    padding: 1em 1.2em 1em 1.2em;
+    background-color: white;
+    border-color: black;
+    transition: color .5s, background-color .5s;
+}
+
+.welcomePageButton > button:hover {
+    background-color: black;
+    color: white;
+
+}
+
+
