@@ -1,11 +1,17 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, Suspense } from "react";
 import Corey from "../components/Corey/Corey";
 import NavBar from "../components/NavBar/NavBar"
-import Portraits from "../components/Portraits/Portraits";
-import LovePortraits from "../components/LovePortraits/LovePortraits";
-import Film from "../components/35Film/35Film";
 import About from "../components/About/About"
-import "./HomePage.css"
+import "./HomePage.css";
+
+const Portraits = React.lazy(() => import('../components/Portraits/Portraits'));
+
+const LovePortraits = React.lazy(() => import("../components/LovePortraits/LovePortraits"));
+
+const Film = React.lazy(() => import("../components/35Film/35Film"));
+
+
+
 
 const HomePage = () => {
 
@@ -19,11 +25,23 @@ const HomePage = () => {
     const renderSwitch = (value) => {
         switch(value) {
             case 'portraits' :
-                return <Portraits />;
+                return  <div>
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <Portraits />
+                            </Suspense>
+                        </div>;
             case 'love' : 
-                return <LovePortraits />
+                return  <div>
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <LovePortraits />
+                            </Suspense>
+                        </div>;
             case "35mm film" : 
-                return <Film />
+                return <div>
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <Film />
+                            </Suspense>
+                        </div>;
             case "about" :
                 return <About />
         }

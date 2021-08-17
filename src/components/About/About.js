@@ -1,4 +1,5 @@
 import React from "react";
+import "./About.css";
 
 const cache = {};
 
@@ -15,18 +16,18 @@ const About = () => {
 
     return (
         <>
-            <p>
-                Hello there! My name is Corey and I'm a photographer from the Phoenix, AZ area.
+            <div className="portraitTextHolder">
+                <p>Hello there! My name is Corey and I'm a photographer from the Phoenix, AZ area.</p>
 
-                I enjoy each type of photography for it's own specific nuances, but my favorite has to be portraits. I love being able to capture a personal moment someone has at a given time and be able to store it for the rest of time.
+                <p>I enjoy each type of photography for it's own specific nuances, but my favorite has to be portraits. I love being able to capture a personal moment someone has at a given time and be able to store it for the rest of time.</p>
 
-                I'm a huge fan of music, collecting records, film + television, traveling, my nephew, and getting to know people 
-                from all walks of life. I am also a graduate of Arizona State University (fork ‘em devils)!
+                <p>I'm a huge fan of music, collecting records, film + television, traveling, my nephew, and getting to know people 
+                from all walks of life. I am also a graduate of Arizona State University (fork ‘em devils)!</p>
 
-                Let's create something amazing together soon.
+                <p>Let's create something amazing together soon.</p>
 
-                Much love.
-            </p>
+                <p>Much love.</p>
+            </div>
             <div className="portraitHolder">
                 {coreyPics.map(image => (
                     <img className="portraitImage" src={image} />

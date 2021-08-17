@@ -1,6 +1,7 @@
 .navBarContainer {
     display: flex;
     flex-direction: row;
+    margin-bottom: 2em;
 }
 
 .navBarContainer > h4 {
@@ -14,4 +15,25 @@
 
 .navBarItemActive {
     color: gray
+}
+
+.rentalMenu {
+    position: relative;
+    padding: 1em; 
+   
+}
+
+.rentalSubMenu {
+    position: absolute;
+    top: 60px; 
+    flex-direction: column
+}
+
+.rentalSubMenu > h4:nth-child(odd) {
+    margin-top: .65em;
+    margin-bottom: .5em;
+}
+
+.rentalSubMenu > h4:nth-child(even) {
+    margin-top: 0
 }
