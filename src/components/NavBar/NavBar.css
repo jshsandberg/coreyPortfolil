@@ -32,8 +32,10 @@
 .rentalSubMenu > h4:nth-child(odd) {
     margin-top: .65em;
     margin-bottom: .5em;
+    cursor: pointer;
 }
 
 .rentalSubMenu > h4:nth-child(even) {
-    margin-top: 0
+    margin-top: 0;
+    cursor: pointer;
 }

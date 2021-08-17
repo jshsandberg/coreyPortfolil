@@ -35,8 +35,8 @@ const NavBar = ({cb}) => {
                                         {item}
                                 </h4>   
                                 <div className="rentalSubMenu" style={{display: rental ? "flex" : "none"}}>
-                                    <h4 onClick={() => {}}>Photobox</h4>
-                                    <h4 onClick={() => {}}>Equipment Rental</h4>
+                                    <h4 onClick={() => {cb("photobox"); setValue(i)}}>Photobox</h4>
+                                    <h4  onClick={() => {cb("equipment"); setValue(i)}}>Equipment Rental</h4>
                                 </div>
                              </div>
                         )

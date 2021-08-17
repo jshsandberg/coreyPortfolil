@@ -1,0 +1,37 @@
+.photoboxTextContainer {
+    display: flex;
+    padding: 1em;
+    flex-direction: row;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.photoboxTextHolder > p {
+    font-size: larger;
+    padding: 1em;
+}
+
+.photoboxTextHolder > p:nth-child(even) {
+    font-size: larger;
+    padding: 1em;
+    margin: 3.5em 0 3.5em 0
+}
+
+.photoboxCarousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photoboxCarousel > img {
+    width: 40vw;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.carouselImage {
+    display: flex;
+    flex-direction: row;
+}

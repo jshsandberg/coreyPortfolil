@@ -1,7 +1,8 @@
 import React, { useState, useCallback, Suspense } from "react";
 import Corey from "../components/Corey/Corey";
-import NavBar from "../components/NavBar/NavBar"
-import About from "../components/About/About"
+import NavBar from "../components/NavBar/NavBar";
+import Photobox from "../components/Photobox/Photobox";
+import About from "../components/About/About";
 import "./HomePage.css";
 
 const Portraits = React.lazy(() => import('../components/Portraits/Portraits'));
@@ -43,7 +44,9 @@ const HomePage = () => {
                             </Suspense>
                         </div>;
             case "about" :
-                return <About />
+                return <About />;
+            case "photobox" :
+                return <Photobox />
         }
     }
 
