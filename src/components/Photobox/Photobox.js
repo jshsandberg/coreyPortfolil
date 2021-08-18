@@ -13,10 +13,20 @@ const carouselImages = Object.entries(cache).map(module => module[1].default);
 
 const Photobox = () => {
 
-    const [indexFirstImage, setIndexFirstImage] = useState(0);
-    const [indexLastImage, setIndexLastImage] = useState(5);
+    const [indexImage, setIndexImage] = useState(3);
     const [carouselImage, setCarouselImage] = useState(carouselImages[0])
 
+
+    const carousel = (item, i) => {
+        setCarouselImage(item);
+        if (i <= 2) {
+            setIndexImage(3);
+        } else if (2 < i && i < 5) {
+            setIndexImage(i + 1)
+        } else if (i >= 5) {
+            setIndexImage(5)
+        }
+    };
 
 
     return (
@@ -36,7 +46,7 @@ const Photobox = () => {
                 <img src={carouselImage} alt="shownCarouselImage" />
                 <div className="carouselImage">
                     {carouselImages.map((image, i) => (
-                        i >= indexFirstImage && i < indexLastImage ? <img onClick={() => setCarouselImage(image)} className="carouselImage" src={image} alt="carouselImage" /> : null
+                        i >= (indexImage - 3) && i < (indexImage + 2) ? <img onClick={() => carousel(image, i)} className="carouselImage" src={image} alt="carouselImage" /> : null
                     ))}
                 </div>
               

@@ -1,0 +1,18 @@
+.cameraTitle {
+    display: flex;
+    flex-direction: column;
+}
+
+.cameraTitle > h2 {
+    text-align: center;
+}
+
+.pricing {
+    text-align: center;
+}
+
+.equipmentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
